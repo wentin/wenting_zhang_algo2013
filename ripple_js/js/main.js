@@ -9,7 +9,7 @@ function resizeCanvas() {
          * Your drawings need to be inside this function otherwise they will be reset when 
          * you resize the browser window and the canvas goes will be cleared.
          */
-		context.strokeStyle="yellow";
+		context.strokeStyle="rgba(0,200,200,0.4)";
 }
 
 var yourRipple = new Ripple();

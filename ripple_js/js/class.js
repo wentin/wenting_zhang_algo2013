@@ -12,7 +12,7 @@ function Ripple() {
 	this.pos = new Point(0, 0);
 	this.catchupSpeed = 0.1;
 
-	context.strokeStyle="yellow";
+	context.strokeStyle="rgba(0,200,200,0.4)";
 
 	for(i=0; i<this.number; i++){
 		this.radiusSet.push(0);
@@ -29,6 +29,7 @@ function Ripple() {
 Ripple.prototype.draw = function(){
 	for(i=0; i<this.number; i++){
 		context.beginPath();
+	context.lineWidth="20";
 		context.arc(this.pos.x, this.pos.y, this.radiusSet[i], 0, 2*Math.PI);
 		context.stroke();
 	}
@@ -43,8 +44,6 @@ Ripple.prototype.update = function(){
 };
 
 Ripple.prototype.mouseMove = function(self, pos){
-	//self.positionB[0].x = pos.clientX;
-	//self.positionB[0].y = pos.clientY;	
 	self.pos.x = pos.clientX;
 	self.pos.y = pos.clientY;	
 	for(i=0; i<self.number; i++){

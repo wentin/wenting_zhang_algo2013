@@ -12,7 +12,7 @@ function Ripple() {
 	this.pos = new Point(0, 0);
 	this.catchupSpeed = 0.1;
 
-	context.strokeStyle="rgba(0,200,200,0.4)";
+	context.strokeStyle="rgba(0,200,200,1)";
 
 	for(i=0; i<this.number; i++){
 		this.radiusSet.push(0);
@@ -29,7 +29,7 @@ function Ripple() {
 Ripple.prototype.draw = function(){
 	for(i=0; i<this.number; i++){
 		context.beginPath();
-	context.lineWidth="20";
+	context.lineWidth="1";
 		context.arc(this.pos.x, this.pos.y, this.radiusSet[i], 0, 2*Math.PI);
 		context.stroke();
 	}

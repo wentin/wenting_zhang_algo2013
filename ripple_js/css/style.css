@@ -5,4 +5,5 @@ body {
 #myCanvas {
 	background-color: #000;  
 	margin: auto;
+	display: block;
 }

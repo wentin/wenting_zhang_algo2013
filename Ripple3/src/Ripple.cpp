@@ -11,9 +11,10 @@
 Ripple::Ripple(){
     ofSeedRandom();
     ofRegisterMouseEvents(this);
-    ofSetColor(255, 255, 0);
+    ofSetColor(0, 255, 255, 150);
+    ofNoFill();
     radius = 0;
-    catchUpSpeed = 0.03f;
+    catchUpSpeed = 0.1f;
     pos.set(0, 0);
     for (int i = 0; i < TOTAL_NUMBER; i++) {
         radiusSet[i] = 0;
@@ -33,14 +34,18 @@ void Ripple::update(){
 void Ripple::draw(){
     
     for (int i = 0; i < TOTAL_NUMBER; i++) {
-        ofCircle(pos.x, pos.y, radiusSet[i]);
+        ofCircle(pos.x, pos.y, radiusTargetSet[i]);
     }
 }
 
 void Ripple::mousePressed(ofMouseEventArgs & args)
 {
+    for (int i = 0; i < TOTAL_NUMBER; i++) {
+        radiusSet[i] = 0;
+        radiusTargetSet[i] = 0;
+    }
     pos.set(args.x, args.y);
-    radius = ofRandom(10.0, 20.0);
+    radius = ofRandom(100.0, 200.0);
     radiusTargetSet[0] = radius;
 }
 void Ripple::mouseMoved(ofMouseEventArgs & args)

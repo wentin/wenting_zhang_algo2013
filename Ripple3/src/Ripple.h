@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include "ofMain.h"
-#define TOTAL_NUMBER 14
+#define TOTAL_NUMBER 8
 
 class Ripple
 {

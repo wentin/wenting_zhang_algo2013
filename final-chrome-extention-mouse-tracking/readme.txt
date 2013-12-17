@@ -13,3 +13,6 @@ How to install:
 6. click the button once to start recording, then interact with the webpage as usual, now your movement is being recorded
 7. when you are done recording, click the button again to start replay
 enjoy!
+
+Demo:
+https://player.vimeo.com/video/82087907
